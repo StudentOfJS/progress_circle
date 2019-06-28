@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Circle Progress</title>
+    <script src="circle_progress_bar.js"></script>
+  </head>
+  <body onload="onLoad()">
+    <div class="meter" data-percent="74">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        viewBox="0 0 300 300"
+        preserveAspectRatio="none"
+        style="width:300; height:300; top:0; left:0;"
+      >
+        <circle
+          cx="100"
+          cy="100"
+          r="57"
+          fill="none"
+          stroke="lightgrey"
+          stroke-width="15"
+        ></circle>
+        <circle
+          cx="100"
+          cy="100"
+          r="57"
+          class="fill"
+          fill="none"
+          stroke="hotpink"
+          stroke-width="15"
+          stroke-dasharray="0,20000"
+          transform="rotate(-90,100,100)"
+        ></circle>
+        <text
+          class="count"
+          text-anchor="middle"
+          x="100"
+          y="110"
+          style="font-size: 24px; font-family: Arial;"
+        >
+          0%
+        </text>
+      </svg>
+    </div>
+  </body>
+</html>
