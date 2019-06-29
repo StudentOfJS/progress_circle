@@ -7,7 +7,7 @@
     <title>Circle Progress</title>
     <script src="circle_progress_bar.js"></script>
     <style>
-      .display{
+      .display {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -19,118 +19,134 @@
       }
     </style>
   </head>
-  <body onload="onLoad()">
+  <body onload="onLoadAnimateCircles()">
     <div class="display">
-      <div class="meter" data-percent="25">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          viewBox="0 0 300 300"
-          preserveAspectRatio="none"
-          style="width:300; height:300;"
-        >
+      <div class="meter" data-percent="50">
+        <svg height="200" width="200">
           <circle
             cx="100"
             cy="100"
-            r="57"
+            r="80"
             fill="none"
             stroke="lightgrey"
-            stroke-width="15"
+            stroke-width="20"
           ></circle>
           <circle
             cx="100"
             cy="100"
-            r="57"
+            r="80"
             class="fill"
             fill="none"
             stroke="lightblue"
-            stroke-width="15"
+            stroke-width="20"
             stroke-dasharray="0,20000"
             transform="rotate(-90,100,100)"
           ></circle>
           <text
             class="count"
             text-anchor="middle"
-            x="100"
-            y="110"
-            style="font-size: 24px; font-family: Arial;"
+            x="104"
+            y="116"
+            style="font-size: 24px; font-family: Arial; font-weight: bold; fill: grey;"
           >
             0%
           </text>
           Sorry, your browser does not support inline SVG.
         </svg>
-        <div class="meter" data-percent="92">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-
-            version="1.1"
-            viewBox="0 0 300 300"
-            preserveAspectRatio="none"
-            style="width:300; height:300;"
-          >
-            <circle
-              cx="100"
-              cy="100"
-              r="57"
-              fill="none"
-              stroke="lightgrey"
-              stroke-width="15"
-            ></circle>
-            <circle
-              cx="100"
-              cy="100"
-              r="57"
-              class="fill"
-              fill="none"
-              stroke="lime"
-              stroke-width="15"
-              stroke-dasharray="0,20000"
-              transform="rotate(-90,100,100)"
-            ></circle>
-            <text
-              class="count"
-              text-anchor="middle"
-              x="100"
-              y="110"
-              style="font-size: 24px; font-family: Arial;"
-            >
-              0%
-            </text>
-            Sorry, your browser does not support inline SVG.
-          </svg>
-      <div class="meter" data-percent="74">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          viewBox="0 0 300 300"
-          preserveAspectRatio="none"
-          style="width:300; height:300;"
-        >
+      </div>
+      <div class="meter" data-percent="44">
+        <svg height="100" width="100">
           <circle
-            cx="100"
-            cy="100"
-            r="57"
+            cx="50"
+            cy="50"
+            r="40"
             fill="none"
             stroke="lightgrey"
-            stroke-width="15"
+            stroke-width="10"
           ></circle>
           <circle
-            cx="100"
-            cy="100"
-            r="57"
+            cx="50"
+            cy="50"
+            r="40"
             class="fill"
             fill="none"
             stroke="hotpink"
-            stroke-width="15"
+            stroke-width="10"
             stroke-dasharray="0,20000"
-            transform="rotate(-90,100,100)"
+            transform="rotate(-90,50,50)"
           ></circle>
           <text
             class="count"
             text-anchor="middle"
-            x="100"
-            y="110"
-            style="font-size: 24px; font-family: Arial;"
+            x="52"
+            y="58"
+            style="font-size: 24px; font-family: Arial; font-weight: bold; fill: grey;"
+          >
+            0%
+          </text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+      <div class="meter" data-percent="12">
+        <svg height="100" width="100">
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="none"
+            stroke="lightgrey"
+            stroke-width="10"
+          ></circle>
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            class="fill"
+            fill="none"
+            stroke="yellow"
+            stroke-width="10"
+            stroke-dasharray="0,20000"
+            transform="rotate(-90,50,50)"
+          ></circle>
+          <text
+            class="count"
+            text-anchor="middle"
+            x="52"
+            y="58"
+            style="font-size: 24px; font-family: Arial; font-weight: bold; fill: grey;"
+          >
+            0%
+          </text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+      <div class="meter" data-percent="99">
+        <svg height="100" width="100">
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="none"
+            stroke="lightgrey"
+            stroke-width="10"
+          ></circle>
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            class="fill"
+            fill="none"
+            stroke="red"
+            stroke-width="10"
+            stroke-dasharray="0,20000"
+            transform="rotate(-90,50,50)"
+          ></circle>
+          <text
+            class="count"
+            text-anchor="middle"
+            x="52"
+            y="58"
+            style="font-size: 24px; font-family: Arial; font-weight: bold; fill: grey;"
           >
             0%
           </text>
@@ -138,6 +154,5 @@
         </svg>
       </div>
     </div>
-    
   </body>
 </html>

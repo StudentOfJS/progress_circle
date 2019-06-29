@@ -1,18 +1,23 @@
-function onLoad() {
+function animatePath(percent, strokePathEl, textEl) {
+  var interval = 10;
+  var angle = 0;
+  var len = strokePathEl.getTotalLength();
+  var angle_increment = 1;
+  var inc = len / 360;
+
+  var timer = window.setInterval(function() {
+    strokePathEl.setAttribute('stroke-dasharray', angle * inc + ', 20000');
+
+    textEl.innerHTML = parseInt((angle / 360) * 100) + '%';
+    if (angle >= percent * 3.6) {
+      window.clearInterval(timer);
+    }
+    angle += angle_increment;
+  }, interval);
+}
+
+function onLoadAnimateCircles() {
   var meters = document.querySelectorAll('.meter');
-  function animatePath(percent, progressEl, timerEl) {
-    var interval = 30;
-    var angle = 0;
-    var angle_increment = 6;
-    var timer = window.setInterval(function() {
-      progressEl.setAttribute('stroke-dasharray', angle + ', 20000');
-      timerEl.innerHTML = parseInt((angle / 360) * 100) + '%';
-      if (angle >= percent * 3.6) {
-        window.clearInterval(timer);
-      }
-      angle += angle_increment;
-    }, interval);
-  }
   if (meters) {
     var i = 0;
     var len = meters.length;
