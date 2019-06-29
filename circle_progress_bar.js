@@ -16,7 +16,7 @@ function animatePath(percent, strokePathEl, textEl) {
   }, interval);
 }
 
-function onLoadAnimateCircles() {
+function onLoadAnimatePath() {
   var meters = document.querySelectorAll('.meter');
   if (meters) {
     var i = 0;
