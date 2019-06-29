@@ -12,8 +12,8 @@
         justify-content: space-evenly;
         align-items: center;
         flex: 0 0 100%;
-        flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         max-width: 100%;
         padding: 50px;
       }
@@ -146,36 +146,48 @@
           Sorry, your browser does not support inline SVG.
         </svg>
       </div>
-      <div class="meter" data-percent="99">
-        <svg height="100" width="100">
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            fill="none"
-            stroke="lightgrey"
-            stroke-width="10"
-          ></circle>
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
-            class="fill"
-            fill="none"
-            stroke="red"
-            stroke-width="10"
+      <div class="meter" data-percent="65">
+        <svg height="140" width="500">
+          <ellipse
+            cx="200"
+            cy="80"
+            rx="100"
+            ry="50"
+            style="fill:transparent;stroke:lightgrey;stroke-width:10"
+          />
+          <ellipse
             stroke-dasharray="0,20000"
-            transform="rotate(-90,50,50)"
-          ></circle>
+            class="fill"
+            cx="200"
+            cy="80"
+            rx="100"
+            ry="50"
+            style="fill:transparent;stroke:lime;stroke-width:10"
+          />
           <text
             class="count"
             text-anchor="middle"
-            x="52"
-            y="58"
+            x="205"
+            y="90"
             style="font-size: 24px; font-family: Arial; font-weight: bold; fill: grey;"
           >
             0%
           </text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+      <div class="meter" data-percent="79">
+        <svg height="180" width="500">
+          <polyline
+            points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+            style="fill:transparent;stroke:lightgrey;stroke-width:4"
+          />
+          <polyline
+            class="fill"
+            stroke-dasharray="0,20000"
+            points="0,40 40,40 40,80 80,80 80,120 120,120 120,160"
+            style="fill:transparent;stroke:red;stroke-width:4"
+          />
           Sorry, your browser does not support inline SVG.
         </svg>
       </div>

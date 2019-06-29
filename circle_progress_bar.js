@@ -1,4 +1,7 @@
 function animatePath(percent, strokePathEl, textEl) {
+  if (!strokePathEl || !percent) {
+    return;
+  }
   var interval = 10;
   var angle = 0;
   var len = strokePathEl.getTotalLength();
@@ -7,8 +10,9 @@ function animatePath(percent, strokePathEl, textEl) {
 
   var timer = window.setInterval(function() {
     strokePathEl.setAttribute('stroke-dasharray', angle * inc + ', 20000');
-
-    textEl.innerHTML = parseInt((angle / 360) * 100) + '%';
+    if (textEl) {
+      textEl.innerHTML = parseInt((angle / 360) * 100) + '%';
+    }
     if (angle >= percent * 3.6) {
       window.clearInterval(timer);
     }
