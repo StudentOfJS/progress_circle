@@ -31,7 +31,6 @@ function animatePath(percent, interval, strokePathEl, textEl) {
   }, interval);
 }
 
-// usage: <body onload="onLoadAnimatePath()">
 function onLoadAnimatePath() {
   var meters = document.querySelectorAll('.meter');
   if (meters) {
@@ -46,3 +45,7 @@ function onLoadAnimatePath() {
     }
   }
 }
+// if window object available
+window.addEventListener('load', function() {
+  onLoadAnimatePath();
+});

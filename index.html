@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Circle Progress</title>
-    <script src="circle_progress_bar.js"></script>
     <style>
       .display {
         display: flex;
@@ -18,8 +17,9 @@
         padding: 50px;
       }
     </style>
+    <script src="circle_progress_bar.js"></script>
   </head>
-  <body onload="onLoadAnimatePath()">
+  <body>
     <div class="display">
       <!-- higher data-interval is slower -->
       <div class="meter" data-percent="55" data-interval="40">
