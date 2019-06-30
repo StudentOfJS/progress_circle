@@ -1,7 +1,6 @@
 // percent = number, speed = number, strokePathEL = SVGElement, textEl = SVGElement
 // textEl and interval are optional
 // lower interval value === higher speed
-
 function animatePath(percent, interval, strokePathEl, textEl) {
   if (!strokePathEl || !percent) {
     return;
@@ -46,6 +45,10 @@ function onLoadAnimatePath() {
   }
 }
 // if window object available
-window.addEventListener('load', function() {
-  onLoadAnimatePath();
-});
+window.addEventListener(
+  'DOMContentLoaded',
+  function() {
+    onLoadAnimatePath();
+  },
+  true
+);
